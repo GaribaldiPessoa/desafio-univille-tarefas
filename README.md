@@ -49,3 +49,19 @@ docker run --rm \
 # Gere a chave da aplicação e crie as tabelas no banco de dados
 ./vendor/bin/sail artisan key:generate
 ./vendor/bin/sail artisan migrate
+```
+
+### 2. Preparando a Interface (Frontend - Vue)
+Abra um segundo terminal na pasta `frontend` e execute:
+
+```bash
+# Instale as dependências do Node
+npm install
+
+# Inicie o servidor de desenvolvimento
+npm run dev
+```
+
+### 3. Acessando e Testando
+Abra o navegador e acesse `http://localhost:5174` (ou a porta indicada pelo Vite no terminal).
+Você pode criar uma conta nova diretamente pela interface do sistema para iniciar os testes!
