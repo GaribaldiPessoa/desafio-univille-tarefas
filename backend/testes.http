@@ -1,0 +1,52 @@
+### Teste de Cadastro (Register)
+POST http://localhost/api/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Seu Nome",
+  "email": "teste@teste.com",
+  "password": "password123"
+}
+
+### Teste de Login
+POST http://localhost/api/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "teste@teste.com",
+  "password": "password123"
+}
+
+@token = 4|i0dM7xkiit4qFJcXOv1mbCWFwrL6LOXELkCw3VVIfba9952a
+
+### Criar uma Tarefa (POST /api/tasks)
+POST http://localhost/api/tasks
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "title": "Minha primeira tarefa do teste",
+  "description": "Estou testando o backend do TaskManager"
+}
+
+### Listar minhas Tarefas (GET /api/tasks)
+GET http://localhost/api/tasks
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### Marcar Tarefa como Concluída (PUT /api/tasks/1)
+PUT http://localhost/api/tasks/1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "is_completed": true
+}
+
+### Excluir uma Tarefa (DELETE /api/tasks/1)
+DELETE http://localhost/api/tasks/1
+Authorization: Bearer {{token}}
